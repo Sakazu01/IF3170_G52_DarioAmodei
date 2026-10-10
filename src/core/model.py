@@ -19,7 +19,6 @@ def rotate(orient, axis):
     else:
         letters[0], letters[1] = letters[1], letters[0]
     return Orientation("".join(letters))
-
 @dataclass(frozen=True)
 class Dimensions:
     w:int
@@ -30,22 +29,18 @@ class Dimensions:
         size = {"W": self.w, "L": self.l, "H":self.h}
         s = orient.value
         return Dimensions(size[s[0]], size[s[1]], size[s[2]])
-
 @dataclass(frozen=True)
 class Package:
     id : str
     dims : Dimensions
     value : int 
     weight : int 
-    isFragile : bool
+    is_fragile : bool
     eta : int
-
 @dataclass(frozen=True)
 class Truck:
     dims : Dimensions
-    maxCapacity: int
-
-
+    max_capacity: int
 @dataclass
 class Instance:
     packages: list
@@ -55,8 +50,6 @@ class Instance:
         self.by_id = {}
         for p in self.packages:
             self.by_id[p.id] = p
- 
- 
 @dataclass(frozen=True)
 class Placement:
     truck: int         
@@ -65,13 +58,11 @@ class Placement:
     z: int           
     orient: Orientation
  
- 
 @dataclass
 class State:
     placements: dict
     def copy(self):
         return State(dict(self.placements))
- 
  
 @dataclass
 class Result:

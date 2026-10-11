@@ -1,7 +1,6 @@
 from core.model import State, Placement, Orientation
 from core.constraints import settle, is_valid
 
-
 def random_state(inst, rng, p_try=0.7, tries=5):
     # buat var random state bisa ubah2 
     state = State({})

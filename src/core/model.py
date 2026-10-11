@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from enum import Enum 
-
 class Orientation(Enum):
     WLH = "WLH"     
     LWH = "LWH"

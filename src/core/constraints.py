@@ -120,14 +120,14 @@ def violations(state, inst):
             if len(supporters) == 0:
                 result.append(pid + ": melayang")
             for s in supporters:
-                if inst.by_id[s].isFragile:
+                if inst.by_id[s].is_fragile:
                     result.append(s + ": fragile jadi support " + pid)
 
         # 5. total berat tidak boleh melebihi kapasitas
         total = 0
         for pid, box in items:
             total += inst.by_id[pid].weight
-        if total > truck.maxCapacity:
+        if total > truck.max_capacity:
             result.append("truk " + str(truck_id) + ": melebihi kapasitas")
     return result
 

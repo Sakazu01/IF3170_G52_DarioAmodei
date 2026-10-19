@@ -9,7 +9,7 @@ from sa_experiment import SAExperiment
 if __name__ == "__main__":
     inst = load_instance(os.path.join(SRC, "data", "sample.json"))
 
-    experiments = sweep(GAExperiment, inst, "iterations", [5, 10, 20], population_size=10)
+    experiments = GAExperiment.vary_iterations(inst) + GAExperiment.vary_population(inst)
     experiments.append(SAExperiment(inst, initial_temp=50, min_temp=1,
                                     cooling_rate=0.8, iterations_per_temp=10))
 

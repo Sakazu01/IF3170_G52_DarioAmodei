@@ -174,5 +174,6 @@ def genetic_algorithm(inst, population_size, iterations, seed=None,
             "population_size": population_size,
             "iterations": iterations,
             "mutation_prob": mutation_prob,
+            "history_avg": history_avg,
         },
     )

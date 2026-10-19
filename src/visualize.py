@@ -29,6 +29,11 @@ if "mpl_toolkits" in sys.modules:
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.projections import get_projection_names, register_projection
+
+if "3d" not in get_projection_names():
+    register_projection(Axes3D)
 
 from core.stats import unplaced_packages
 

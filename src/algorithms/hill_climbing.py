@@ -6,17 +6,7 @@ from core.io import load_instance, save_state
 from core.constraints import is_valid
 from core.objective import total_value
 from core.generator import random_state
-from core.moves import random_neighbor
-
-
-def sample_neighbors(state, inst, rng, n):
-    # ambil sampai n neighbor valid 
-    out = []
-    for _ in range(n):
-        nb = random_neighbor(state, inst, rng)
-        if nb is not None:
-            out.append(nb)
-    return out
+from core.moves import sample_neighbors
 
 
 def climb(inst, rng, state, mode, max_iter, n_neighbors, max_sideways):

@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "name": "sideways_move",
+    "instance": "edge_semua_kelebihan_berat",
+    "params": {"n_neighbors": 30, "max_iter": 300, "max_sideways": 50},
+    "mean": 0,
+    "best": 0,
+    "stdev": 0.0,
+    "mean_duration": 0.00431521733601888,
+    "mean_iterations": 0
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {"O1": null, "O2": null, "O3": null},
+      "final_state": {"O1": null, "O2": null, "O3": null},
+      "initial_value": 0,
+      "final_value": 0,
+      "iterations": 0,
+      "duration": 0.004446506500244141,
+      "history": [0],
+      "sideways_used": 0
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {"O1": null, "O2": null, "O3": null},
+      "final_state": {"O1": null, "O2": null, "O3": null},
+      "initial_value": 0,
+      "final_value": 0,
+      "iterations": 0,
+      "duration": 0.004000186920166016,
+      "history": [0],
+      "sideways_used": 0
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {"O1": null, "O2": null, "O3": null},
+      "final_state": {"O1": null, "O2": null, "O3": null},
+      "initial_value": 0,
+      "final_value": 0,
+      "iterations": 0,
+      "duration": 0.004498958587646484,
+      "history": [0],
+      "sideways_used": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "name": "sideways_move",
+    "instance": "edge_1paket",
+    "params": {"n_neighbors": 30, "max_iter": 300, "max_sideways": 50},
+    "mean": 30,
+    "best": 30,
+    "stdev": 0.0,
+    "mean_duration": 0.017327070236206055,
+    "mean_iterations": 50.666666666666664
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 0, "y": 2, "z": 0, "orient": "LHW"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 51,
+      "duration": 0.01835775375366211,
+      "history": [0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30],
+      "sideways_used": 50
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "final_state": {
+        "A1": {"truck": 0, "x": 1, "y": 1, "z": 0, "orient": "LWH"}
+      },
+      "initial_value": 30,
+      "final_value": 30,
+      "iterations": 50,
+      "duration": 0.016867399215698242,
+      "history": [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30],
+      "sideways_used": 50
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 0, "y": 2, "z": 0, "orient": "WLH"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 51,
+      "duration": 0.016756057739257812,
+      "history": [0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30],
+      "sideways_used": 50
+    }
+  ]
+}

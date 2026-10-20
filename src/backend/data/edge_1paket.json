@@ -1,0 +1,26 @@
+{
+  "trucks": [
+    {
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "max_capacity": 50
+    }
+  ],
+  "packages": [
+    {
+      "id": "A1",
+      "dimensions": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "value": 30,
+      "weight": 10,
+      "fragile": false,
+      "eta": 1
+    }
+  ]
+}

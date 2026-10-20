@@ -2,3 +2,10 @@ __pycache__/
 .venv/
 venv/
 .vscode/
+
+# frontend
+node_modules/
+src/frontend/dist/
+
+# file yang diunggah lewat frontend
+src/backend/uploads/

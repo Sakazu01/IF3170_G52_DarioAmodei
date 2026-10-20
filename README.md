@@ -28,7 +28,7 @@ Laporan lengkap (PDF) ada di folder `docs/`.
   ditentukan oleh `settle()` (gravitasi), sehingga paket tidak pernah melayang.
 - **Neighbor**: `relocate` (0,35), `swap` (0,35), `transfer` antar truk (0,15), dan `rotate` (0,15). Hasil yang
   melanggar constraint dibuang.
-- Atribut `eta` ada pada data tetapi tidak dipakai pada objective maupun constraint.
+- **Objective**: `objective = total_value - ETA_WEIGHT x eta_penalty` (`core/objective.py`, `ETA_WEIGHT = 1`). Penalti ETA menghitung pasangan paket dalam satu truk yang urutan bongkarnya terbalik: paket ber-`eta` lebih besar menghalangi paket ber-`eta` lebih kecil (di depan, atau di atasnya). Pintu truk diasumsikan di `y = 0`.
 
 ## Struktur Repository
 ```
@@ -143,17 +143,17 @@ negatif, dan setiap paket muat di salah satu truk pada salah satu orientasi.
 | `edge_1paket.json` | 1 | 1 | kasus batas: satu paket |
 | `edge_semua_kelebihan_berat.json` | 1 | 3 | kasus batas: tidak ada paket yang bisa dimuat (optimum 0) |
 
-## Ringkasan Hasil Eksperimen (`dasar_1truk_50paket`, rata-rata 3 run)
-Batas atas relaksasi bobot = 2544.
+## Ringkasan Hasil Eksperimen (`dasar_1truk_50paket`, rata-rata 3 run, nilai objective)
+Batas atas program (jumlah value semua paket) = 2906.
 
 | Algoritma (konfigurasi) | Rata-rata | Waktu per run |
 |---|---|---|
-| Steepest ascent (n_neighbors=30) | 1780 | 0,5 s |
-| Stochastic (n_neighbors=30) | 1717 | 0,7 s |
-| Sideways move (max_sideways=50) | 2217 | 11,6 s |
-| Random restart (max_restarts=5) | 1906 | 2,2 s |
-| Simulated annealing (cooling_rate=0,95) | 2016 | 1,2 s |
-| Genetic algorithm (populasi 20, 150 generasi) | 2179 | 6,2 s |
+| Steepest ascent (n_neighbors=30) | 1965 | 1,2 s |
+| Stochastic (n_neighbors=30) | 1664 | 0,9 s |
+| Sideways move (max_sideways=50) | 2245 | 16,7 s |
+| Random restart (max_restarts=5) | 2065 | 5,4 s |
+| Simulated annealing (cooling_rate=0,95) | 2014 | 1,2 s |
+| Genetic algorithm (populasi 20, 150 generasi) | 2143 | 5,7 s |
 
 Hasil lengkap dan analisisnya ada di laporan (`docs/`). Catatan: tiap konfigurasi hanya 3 run, sehingga selisih kecil
 belum bermakna secara statistik.
@@ -161,9 +161,9 @@ belum bermakna secara statistik.
 ## Pembagian Tugas
 | Anggota | Tugas |
 |---|---|
-| Ariel Cornelius Sitorus | Input/output, constraint; Hill-Climbing (4 varian) dan eksperimennya; visualisasi web (`frontend`) dan perapian struktur repository |
+| Ariel Cornelius Sitorus | Model data, input/output, generator state awal, objective function, constraint; Hill-Climbing (4 varian) dan eksperimennya; visualisasi web (`frontend`) dan perapian struktur repository |
 | Kloce Paul William Saragih | Simulated Annealing; dukungan multi-truk (move antar truk, statistik per truk, generator instance); CLI `run.py`; harness eksperimen dan pelaporan |
-| Yayat Nurhidayat | Model data, generator state awal, objective function (value dan penalti ETA); Genetic Algorithm dan eksperimennya |
+| Yayat Nurhidayat | Genetic Algorithm dan eksperimennya |
 
 ## Pemecahan Masalah
 - **Halaman web tidak tampil**: frontend belum dibangun. Jalankan `npm install && npm run build` di `src/frontend`.

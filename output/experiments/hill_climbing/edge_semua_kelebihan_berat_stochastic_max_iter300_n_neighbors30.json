@@ -6,7 +6,7 @@
     "mean": 0,
     "best": 0,
     "stdev": 0.0,
-    "mean_duration": 0.00441130002339681,
+    "mean_duration": 0.002374410629272461,
     "mean_iterations": 0
   },
   "records": [
@@ -17,8 +17,10 @@
       "final_state": {"O1": null, "O2": null, "O3": null},
       "initial_value": 0,
       "final_value": 0,
+      "total_value": 0,
+      "eta_penalty": 0,
       "iterations": 0,
-      "duration": 0.004719972610473633,
+      "duration": 0.0025272369384765625,
       "history": [0],
       "sideways_used": 0
     },
@@ -29,8 +31,10 @@
       "final_state": {"O1": null, "O2": null, "O3": null},
       "initial_value": 0,
       "final_value": 0,
+      "total_value": 0,
+      "eta_penalty": 0,
       "iterations": 0,
-      "duration": 0.004124879837036133,
+      "duration": 0.002174854278564453,
       "history": [0],
       "sideways_used": 0
     },
@@ -41,8 +45,10 @@
       "final_state": {"O1": null, "O2": null, "O3": null},
       "initial_value": 0,
       "final_value": 0,
+      "total_value": 0,
+      "eta_penalty": 0,
       "iterations": 0,
-      "duration": 0.004389047622680664,
+      "duration": 0.002421140670776367,
       "history": [0],
       "sideways_used": 0
     }

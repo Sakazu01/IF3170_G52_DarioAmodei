@@ -161,9 +161,9 @@ belum bermakna secara statistik.
 ## Pembagian Tugas
 | Anggota | Tugas |
 |---|---|
-| Ariel Cornelius Sitorus | Model data, input/output, generator state awal, objective function, constraint; Hill-Climbing (4 varian) dan eksperimennya; visualisasi web (`frontend`) dan perapian struktur repository |
+| Ariel Cornelius Sitorus | Input/output, constraint; Hill-Climbing (4 varian) dan eksperimennya; visualisasi web (`frontend`) dan perapian struktur repository |
 | Kloce Paul William Saragih | Simulated Annealing; dukungan multi-truk (move antar truk, statistik per truk, generator instance); CLI `run.py`; harness eksperimen dan pelaporan |
-| Yayat Nurhidayat | Genetic Algorithm dan eksperimennya |
+| Yayat Nurhidayat | Model data, generator state awal, objective function (value dan penalti ETA); Genetic Algorithm dan eksperimennya |
 
 ## Pemecahan Masalah
 - **Halaman web tidak tampil**: frontend belum dibangun. Jalankan `npm install && npm run build` di `src/frontend`.

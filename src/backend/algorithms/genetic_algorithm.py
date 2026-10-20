@@ -5,14 +5,14 @@ from core.constraints import in_bounds, is_valid, xy_overlap
 from core.generator import random_state
 from core.model import Orientation, Placement, Result, State
 from core.moves import random_neighbor
-from core.objective import total_value
+from core.objective import objective
 
 MUTATION_PROB = 0.2
 REFILL_TRIES = 10
 
 
 def fitness(state, inst):
-    return total_value(state, inst)
+    return max(0, objective(state, inst))   # roulette butuh fitness tidak negatif
 
 def random_selection(population, cumulative, rng):
     total = cumulative[-1]

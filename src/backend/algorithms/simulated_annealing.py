@@ -3,7 +3,7 @@ import time
 
 from core.model import Result
 from core.moves import random_neighbor
-from core.objective import total_value
+from core.objective import objective
 
 
 def simulated_annealing(inst, initial_state, rng, initial_temp=100.0,
@@ -12,7 +12,7 @@ def simulated_annealing(inst, initial_state, rng, initial_temp=100.0,
     start = time.perf_counter()
 
     current = initial_state
-    current_value = total_value(current, inst)
+    current_value = objective(current, inst)
     best = current
     best_value = current_value
 
@@ -28,7 +28,7 @@ def simulated_annealing(inst, initial_state, rng, initial_temp=100.0,
             if neighbor is None:
                 continue
 
-            neighbor_value = total_value(neighbor, inst)
+            neighbor_value = objective(neighbor, inst)
             delta = neighbor_value - current_value
 
             if delta >= 0:

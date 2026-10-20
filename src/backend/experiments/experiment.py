@@ -9,7 +9,7 @@ SRC = os.path.join(HERE, "..")
 sys.path.insert(0, SRC)
  
 from core.constraints import is_valid
-from core.objective import total_value
+from core.objective import eta_penalty, objective, total_value
 
 
 def to_json(data):
@@ -59,8 +59,10 @@ class Experiment:
             "seed": self.seed + i,
             "initial_state": state_to_dict(result.initial_state),
             "final_state": state_to_dict(result.final_state),
-            "initial_value": total_value(result.initial_state, self.inst),
+            "initial_value": objective(result.initial_state, self.inst),
             "final_value": result.final_value,
+            "total_value": total_value(result.final_state, self.inst),
+            "eta_penalty": eta_penalty(result.final_state, self.inst),
             "iterations": len(result.history) - 1,
             "duration": result.duration,
             "history": result.history,

@@ -1,14 +1,14 @@
 import random
 import time
 from core.model import Result
-from core.objective import total_value
+from core.objective import objective
 from core.generator import random_state
 from core.moves import sample_neighbors
 
 
 def climb(inst, rng, state, mode, max_iter, n_neighbors, max_sideways):
     cur = state
-    cur_val = total_value(cur, inst)
+    cur_val = objective(cur, inst)
     history = [cur_val]
     sideways = 0
 
@@ -16,7 +16,7 @@ def climb(inst, rng, state, mode, max_iter, n_neighbors, max_sideways):
         neighbors = sample_neighbors(cur, inst, rng, n_neighbors)
         if len(neighbors) == 0:
             break
-        scored = [(total_value(nb, inst), nb) for nb in neighbors] 
+        scored = [(objective(nb, inst), nb) for nb in neighbors] 
 
         if mode == "stochastic":
             better = [s for s in scored if s[0] > cur_val]
@@ -42,7 +42,7 @@ def single_run(inst, seed, init_state, mode, max_iter, n_neighbors, max_sideways
     start = time.time()
     initial = init_state if init_state is not None else random_state(inst, rng)
     final, history, extras = climb(inst, rng, initial, mode, max_iter, n_neighbors, max_sideways)
-    return Result(initial, final, total_value(final, inst), history, time.time() - start, extras)
+    return Result(initial, final, objective(final, inst), history, time.time() - start, extras)
 
 
 # 1. Steepest ascent: ambil neighbor terbaik, berhenti jika tidak ada yang lebih baik.
@@ -66,7 +66,7 @@ def random_restart(inst, seed=None, init_state=None, max_iter=1000, n_neighbors=
     start = time.time()
     initial = init_state if init_state is not None else random_state(inst, rng)
 
-    final, best_val = initial, -1
+    final, best_val = initial, float("-inf")
     history, per_restart, iters_per_restart = [], [], []
     for r in range(max_restarts + 1):
         s0 = initial if r == 0 else random_state(inst, rng)
@@ -79,4 +79,4 @@ def random_restart(inst, seed=None, init_state=None, max_iter=1000, n_neighbors=
 
     extras = {"restarts": max_restarts, "iterations_per_restart": iters_per_restart,
               "value_per_restart": per_restart}
-    return Result(initial, final, total_value(final, inst), history, time.time() - start, extras)
+    return Result(initial, final, objective(final, inst), history, time.time() - start, extras)

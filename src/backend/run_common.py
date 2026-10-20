@@ -9,7 +9,7 @@ from algorithms.simulated_annealing import simulated_annealing
 from core.constraints import violations
 from core.generator import random_state
 from core.io import save_state
-from core.objective import total_value
+from core.objective import eta_penalty, objective, total_value
 from core.stats import per_truck_stats, unplaced_packages
 
 # tiap algoritma dipanggil sebagai run(inst, seed, **params)
@@ -110,8 +110,10 @@ def run_experiment(algorithm, inst, params=None, seed=42, runs=3,
             "run": run_id,
             "seed": run_seed,
             "params": merged,
-            "initial_value": total_value(result.initial_state, inst),
+            "initial_value": objective(result.initial_state, inst),
             "final_value": result.final_value,
+            "total_value": total_value(result.final_state, inst),
+            "eta_penalty": eta_penalty(result.final_state, inst),
             "iterations": len(result.history) - 1,
             "duration": result.duration,
             "per_truck": {"initial": initial_stats, "final": final_stats},

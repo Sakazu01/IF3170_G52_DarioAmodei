@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "name": "stochastic",
+    "instance": "edge_1paket",
+    "params": {"n_neighbors": 30, "max_iter": 300},
+    "mean": 30,
+    "best": 30,
+    "stdev": 0.0,
+    "mean_duration": 0.0007498264312744141,
+    "mean_iterations": 0.6666666666666666
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "HWL"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 1,
+      "duration": 0.0009171962738037109,
+      "history": [0, 30],
+      "sideways_used": 0
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "final_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "initial_value": 30,
+      "final_value": 30,
+      "iterations": 0,
+      "duration": 0.0003528594970703125,
+      "history": [30],
+      "sideways_used": 0
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 2, "y": 0, "z": 0, "orient": "LHW"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 1,
+      "duration": 0.0009794235229492188,
+      "history": [0, 30],
+      "sideways_used": 0
+    }
+  ]
+}

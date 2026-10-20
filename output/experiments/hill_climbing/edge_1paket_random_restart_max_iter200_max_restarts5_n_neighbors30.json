@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "name": "random_restart",
+    "instance": "edge_1paket",
+    "params": {"n_neighbors": 30, "max_iter": 200, "max_restarts": 5},
+    "mean": 30,
+    "best": 30,
+    "stdev": 0.0,
+    "mean_duration": 0.003352959950764974,
+    "mean_iterations": 7.333333333333333
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 1, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 7,
+      "duration": 0.0030944347381591797,
+      "history": [0, 30, 30, 30, 0, 30, 30, 30],
+      "restarts": 5,
+      "iterations_per_restart": [1, 0, 0, 1, 0, 0],
+      "value_per_restart": [30, 30, 30, 30, 30, 30]
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "final_state": {
+        "A1": {"truck": 0, "x": 0, "y": 1, "z": 0, "orient": "WHL"}
+      },
+      "initial_value": 30,
+      "final_value": 30,
+      "iterations": 6,
+      "duration": 0.0026404857635498047,
+      "history": [30, 30, 30, 30, 0, 30, 30],
+      "restarts": 5,
+      "iterations_per_restart": [0, 0, 0, 0, 1, 0],
+      "value_per_restart": [30, 30, 30, 30, 30, 30]
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {"A1": null},
+      "final_state": {
+        "A1": {"truck": 0, "x": 2, "y": 2, "z": 0, "orient": "LWH"}
+      },
+      "initial_value": 0,
+      "final_value": 30,
+      "iterations": 9,
+      "duration": 0.0043239593505859375,
+      "history": [0, 30, 0, 30, 0, 30, 0, 30, 30, 30],
+      "restarts": 5,
+      "iterations_per_restart": [1, 1, 1, 1, 0, 0],
+      "value_per_restart": [30, 30, 30, 30, 30, 30]
+    }
+  ]
+}

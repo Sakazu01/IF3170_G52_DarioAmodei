@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "name": "steepest_ascent",
+    "instance": "dasar_1truk_8paket",
+    "params": {"n_neighbors": 30, "max_iter": 300},
+    "mean": 366.6666666666667,
+    "best": 415,
+    "stdev": 34.23773097362356,
+    "mean_duration": 0.01873644193013509,
+    "mean_iterations": 2.6666666666666665
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 5, "y": 5, "z": 0, "orient": "HWL"},
+        "S2": null,
+        "S3": {"truck": 0, "x": 4, "y": 0, "z": 0, "orient": "WLH"},
+        "S4": null,
+        "S5": {"truck": 0, "x": 2, "y": 4, "z": 0, "orient": "HLW"},
+        "S6": null,
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 0, "orient": "LWH"},
+        "S8": {"truck": 0, "x": 3, "y": 2, "z": 0, "orient": "LHW"}
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 5, "y": 5, "z": 0, "orient": "HWL"},
+        "S2": {"truck": 0, "x": 0, "y": 0, "z": 0, "orient": "LHW"},
+        "S3": {"truck": 0, "x": 4, "y": 0, "z": 0, "orient": "WLH"},
+        "S4": null,
+        "S5": {"truck": 0, "x": 2, "y": 4, "z": 0, "orient": "HLW"},
+        "S6": null,
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 0, "orient": "LWH"},
+        "S8": {"truck": 0, "x": 3, "y": 2, "z": 0, "orient": "LHW"}
+      },
+      "initial_value": 265,
+      "final_value": 345,
+      "iterations": 2,
+      "duration": 0.015857934951782227,
+      "history": [265, 335, 345],
+      "sideways_used": 0
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 4, "y": 1, "z": 0, "orient": "HLW"},
+        "S2": {"truck": 0, "x": 0, "y": 0, "z": 0, "orient": "WHL"},
+        "S3": null,
+        "S4": {"truck": 0, "x": 0, "y": 3, "z": 0, "orient": "LWH"},
+        "S5": {"truck": 0, "x": 3, "y": 4, "z": 1, "orient": "LHW"},
+        "S6": {"truck": 0, "x": 1, "y": 3, "z": 1, "orient": "HLW"},
+        "S7": {"truck": 0, "x": 4, "y": 0, "z": 0, "orient": "HLW"},
+        "S8": null
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 4, "y": 1, "z": 0, "orient": "HLW"},
+        "S2": {"truck": 0, "x": 0, "y": 0, "z": 0, "orient": "WHL"},
+        "S3": {"truck": 0, "x": 4, "y": 0, "z": 2, "orient": "HLW"},
+        "S4": null,
+        "S5": {"truck": 0, "x": 3, "y": 4, "z": 0, "orient": "LHW"},
+        "S6": {"truck": 0, "x": 1, "y": 3, "z": 0, "orient": "HLW"},
+        "S7": {"truck": 0, "x": 5, "y": 7, "z": 0, "orient": "HWL"},
+        "S8": {"truck": 0, "x": 0, "y": 3, "z": 2, "orient": "LWH"}
+      },
+      "initial_value": 350,
+      "final_value": 415,
+      "iterations": 3,
+      "duration": 0.022880077362060547,
+      "history": [350, 390, 410, 415],
+      "sideways_used": 0
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 3, "y": 7, "z": 0, "orient": "LHW"},
+        "S2": null,
+        "S3": {"truck": 0, "x": 1, "y": 1, "z": 0, "orient": "LHW"},
+        "S4": {"truck": 0, "x": 1, "y": 3, "z": 2, "orient": "WLH"},
+        "S5": null,
+        "S6": {"truck": 0, "x": 0, "y": 4, "z": 0, "orient": "LHW"},
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 2, "orient": "WHL"},
+        "S8": null
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 3, "y": 7, "z": 0, "orient": "LHW"},
+        "S2": {"truck": 0, "x": 1, "y": 1, "z": 1, "orient": "LHW"},
+        "S3": {"truck": 0, "x": 3, "y": 5, "z": 1, "orient": "HLW"},
+        "S4": {"truck": 0, "x": 1, "y": 3, "z": 0, "orient": "WLH"},
+        "S5": {"truck": 0, "x": 0, "y": 4, "z": 1, "orient": "LHW"},
+        "S6": null,
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 0, "orient": "WHL"},
+        "S8": null
+      },
+      "initial_value": 240,
+      "final_value": 340,
+      "iterations": 3,
+      "duration": 0.0174713134765625,
+      "history": [240, 260, 280, 340],
+      "sideways_used": 0
+    }
+  ]
+}

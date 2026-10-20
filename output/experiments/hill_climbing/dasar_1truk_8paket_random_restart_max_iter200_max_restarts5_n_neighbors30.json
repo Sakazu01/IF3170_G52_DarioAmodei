@@ -1,0 +1,110 @@
+{
+  "summary": {
+    "name": "random_restart",
+    "instance": "dasar_1truk_8paket",
+    "params": {"n_neighbors": 30, "max_iter": 200, "max_restarts": 5},
+    "mean": 411.6666666666667,
+    "best": 415,
+    "stdev": 2.3570226039551585,
+    "mean_duration": 0.09387373924255371,
+    "mean_iterations": 19.666666666666668
+  },
+  "records": [
+    {
+      "run": 0,
+      "seed": 0,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 5, "y": 5, "z": 0, "orient": "HWL"},
+        "S2": null,
+        "S3": {"truck": 0, "x": 4, "y": 0, "z": 0, "orient": "WLH"},
+        "S4": null,
+        "S5": {"truck": 0, "x": 2, "y": 4, "z": 0, "orient": "HLW"},
+        "S6": null,
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 0, "orient": "LWH"},
+        "S8": {"truck": 0, "x": 3, "y": 2, "z": 0, "orient": "LHW"}
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 0, "y": 5, "z": 0, "orient": "LHW"},
+        "S2": {"truck": 0, "x": 2, "y": 6, "z": 0, "orient": "LHW"},
+        "S3": {"truck": 0, "x": 3, "y": 4, "z": 0, "orient": "WLH"},
+        "S4": {"truck": 0, "x": 1, "y": 0, "z": 0, "orient": "WLH"},
+        "S5": {"truck": 0, "x": 1, "y": 1, "z": 1, "orient": "WLH"},
+        "S6": {"truck": 0, "x": 4, "y": 0, "z": 2, "orient": "HLW"},
+        "S7": {"truck": 0, "x": 1, "y": 0, "z": 1, "orient": "LHW"},
+        "S8": null
+      },
+      "initial_value": 265,
+      "final_value": 410,
+      "iterations": 18,
+      "duration": 0.09143495559692383,
+      "history": [265, 335, 345, 280, 300, 320, 340, 410, 250, 320, 370, 410, 305, 395, 305, 375, 280, 300, 340],
+      "restarts": 5,
+      "iterations_per_restart": [2, 4, 3, 1, 1, 2],
+      "value_per_restart": [345, 410, 410, 395, 375, 340]
+    },
+    {
+      "run": 1,
+      "seed": 1,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 4, "y": 1, "z": 0, "orient": "HLW"},
+        "S2": {"truck": 0, "x": 0, "y": 0, "z": 0, "orient": "WHL"},
+        "S3": null,
+        "S4": {"truck": 0, "x": 0, "y": 3, "z": 0, "orient": "LWH"},
+        "S5": {"truck": 0, "x": 3, "y": 4, "z": 1, "orient": "LHW"},
+        "S6": {"truck": 0, "x": 1, "y": 3, "z": 1, "orient": "HLW"},
+        "S7": {"truck": 0, "x": 4, "y": 0, "z": 0, "orient": "HLW"},
+        "S8": null
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 4, "y": 1, "z": 0, "orient": "HLW"},
+        "S2": {"truck": 0, "x": 0, "y": 0, "z": 0, "orient": "WHL"},
+        "S3": {"truck": 0, "x": 4, "y": 0, "z": 2, "orient": "HLW"},
+        "S4": null,
+        "S5": {"truck": 0, "x": 3, "y": 4, "z": 0, "orient": "LHW"},
+        "S6": {"truck": 0, "x": 1, "y": 3, "z": 0, "orient": "HLW"},
+        "S7": {"truck": 0, "x": 5, "y": 7, "z": 0, "orient": "HWL"},
+        "S8": {"truck": 0, "x": 0, "y": 3, "z": 2, "orient": "LWH"}
+      },
+      "initial_value": 350,
+      "final_value": 415,
+      "iterations": 21,
+      "duration": 0.09424924850463867,
+      "history": [350, 390, 410, 415, 270, 320, 340, 410, 240, 310, 330, 335, 360, 210, 250, 150, 240, 260, 340, 410, 285, 305],
+      "restarts": 5,
+      "iterations_per_restart": [3, 3, 4, 1, 4, 1],
+      "value_per_restart": [415, 410, 360, 250, 410, 305]
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "initial_state": {
+        "S1": {"truck": 0, "x": 3, "y": 7, "z": 0, "orient": "LHW"},
+        "S2": null,
+        "S3": {"truck": 0, "x": 1, "y": 1, "z": 0, "orient": "LHW"},
+        "S4": {"truck": 0, "x": 1, "y": 3, "z": 2, "orient": "WLH"},
+        "S5": null,
+        "S6": {"truck": 0, "x": 0, "y": 4, "z": 0, "orient": "LHW"},
+        "S7": {"truck": 0, "x": 1, "y": 2, "z": 2, "orient": "WHL"},
+        "S8": null
+      },
+      "final_state": {
+        "S1": {"truck": 0, "x": 2, "y": 6, "z": 2, "orient": "LWH"},
+        "S2": {"truck": 0, "x": 2, "y": 1, "z": 0, "orient": "LHW"},
+        "S3": {"truck": 0, "x": 0, "y": 4, "z": 0, "orient": "WLH"},
+        "S4": {"truck": 0, "x": 1, "y": 0, "z": 0, "orient": "LHW"},
+        "S5": {"truck": 0, "x": 2, "y": 3, "z": 0, "orient": "LWH"},
+        "S6": {"truck": 0, "x": 0, "y": 6, "z": 0, "orient": "LHW"},
+        "S7": {"truck": 0, "x": 0, "y": 2, "z": 0, "orient": "WHL"},
+        "S8": null
+      },
+      "initial_value": 240,
+      "final_value": 410,
+      "iterations": 20,
+      "duration": 0.09593701362609863,
+      "history": [240, 260, 280, 340, 230, 290, 220, 300, 320, 335, 355, 375, 205, 295, 335, 395, 320, 360, 410, 305, 320],
+      "restarts": 5,
+      "iterations_per_restart": [3, 1, 5, 3, 2, 1],
+      "value_per_restart": [340, 290, 375, 395, 410, 320]
+    }
+  ]
+}

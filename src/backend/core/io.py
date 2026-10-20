@@ -10,7 +10,7 @@ def validate_instance(inst):
         errors.append("minimal harus ada satu truk")
 
     for i, t in enumerate(inst.trucks):
-        if t.dims.w <= 0 or t.dims.l <= 0 or t.dims.h <= 0 or t.maxCapacity <= 0:
+        if t.dims.w <= 0 or t.dims.l <= 0 or t.dims.h <= 0 or t.max_capacity <= 0:
             errors.append("truk " + str(i) + ": dimensi dan kapasitas harus positif")
 
     ids = set()
@@ -60,13 +60,13 @@ def save_instance(inst, path):
     for t in inst.trucks:
         data["trucks"].append({
             "dimensions": {"w": t.dims.w, "l": t.dims.l, "h": t.dims.h},
-            "max_capacity": t.maxCapacity})
+            "max_capacity": t.max_capacity})
     for p in inst.packages:
         data["packages"].append({
             "id": p.id,
             "dimensions": {"w": p.dims.w, "l": p.dims.l, "h": p.dims.h},
             "value": p.value, "weight": p.weight,
-            "fragile": p.isFragile, "eta": p.eta})
+            "fragile": p.is_fragile, "eta": p.eta})
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -93,7 +93,3 @@ def state_from_dict(data):
 def save_state(state, path):
     with open(path, "w") as f:
         json.dump(state_to_dict(state), f, indent=2)
-
-def load_state(path):
-    with open(path) as f:
-        return state_from_dict(json.load(f))
